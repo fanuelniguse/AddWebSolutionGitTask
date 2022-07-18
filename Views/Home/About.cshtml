@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>Add User Page </h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Add User >>>>.</p>
+
+<form method="post">
+    <label> First Name </label> <input name="Fname" type="text" />
+    <br />
+    <label> Last Name </label><input name="Lname" type="text" />
+
+    <br />
+    <label> Email</label> <input name="email" type="email" />
+    <br /> <label>Date Of Birth</label><input name="dob" type="datetime" />
+    <br />
+    <table>
+        <thead id="experienceHeader">
+
+
+        </thead>
+        <tbody id="experieceList">
+        </tbody>i
+        <tfoot>
+
+
+            <tr>
+                <th> <p>     </p></th>
+                <th> <p>     </p></th>
+                <th> <p>      </p></th>
+                <th class="center-block"> <input type="button" class="btn btn-primary" onclick="addExperience()" asp-controller="Home" asp-action="addExperience" value="Add Experience"></th>
+            </tr>
+        </tfoot>
+    </table>
+    <button onclick="ff()" type="submit"> Save User </button>
+</form>@{
+    ViewBag.Title = "About";
+}
+
+

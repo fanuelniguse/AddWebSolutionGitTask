@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>Users List </h2>
+<h3>------ </h3>
+
+
+
+
+
+
+
+@{
+    List<AddWebTask.Models.AddUserModel> us = new List<AddWebTask.Models.AddUserModel>();
+
+    us = ViewBag.users;
+
+  
+
+
+
+                for (int j = 0; j < ViewBag.users.Count; j++)
+                {
+        <div class="jumbotron">
+            <h4>@us[j].user.Fname+ @us[j].user.Lname</h4>
+        </div>
+        <div class="row">
+            
+            @{
+                if (@us[j].expriences.Count==0)
+                {
+                        <div class="col-md-4">
+                            <p>
+                               No Experience 
+                            </p>
+                            
+                        </div>
+                }
+                for (int k = 0; k < us[j].expriences.Count; k++)
+                {
+                    <div class="col-md-4">
+                        <h2>Experience @k</h2>
+                        <p>
+                            Company: @us[j].expriences[k].company
+                            Position: @us[j].expriences[k].position
+                            FromDate: @us[j].expriences[k].FromDate
+                            ToDate: @us[j].expriences[k].toDate
+                        </p>
+                      
+                    </div>
+
+                }
+            }
+
+
+
+        </div>
+        
+
+    }
+
+
+
+
+
+
+}
